@@ -8,47 +8,20 @@ public class LastDigitInEnglish {
         System.out.println("Please enter a number: ");
         int number = Integer.parseInt(scanner.nextLine());
         int lastDigit = number % 10;
-        String digitAsWord = "";
-
-        switch (lastDigit) {
-            case 0:
-                digitAsWord = "Your last digit is zero";
-                break;
-            case 1:
-                digitAsWord = "Your last digit is one";
-                break;
-            case 2:
-                digitAsWord = "Your last digit is two";
-                break;
-            case 3:
-                digitAsWord = "Your last digit is three";
-                break;
-            case 4:
-                digitAsWord = "Your last digit is four";
-                break;
-            case 5:
-                digitAsWord = "Your last digit is five";
-                break;
-            case 6:
-                digitAsWord = "Your last digit is six";
-                break;
-            case 7:
-                digitAsWord = "Your last digit is seven";
-                break;
-            case 8:
-                digitAsWord = "Your last digit is eight";
-                break;
-            case 9:
-                digitAsWord = "Your last digit is nine";
-                break;
-            default:
-                digitAsWord = "unknown";
-                break;
-        }
+        String digitAsWord = switch (lastDigit) {
+            case 0 -> "Your last digit is zero";
+            case 1 -> "Your last digit is one";
+            case 2 -> "Your last digit is two";
+            case 3 -> "Your last digit is three";
+            case 4 -> "Your last digit is four";
+            case 5 -> "Your last digit is five";
+            case 6 -> "Your last digit is six";
+            case 7 -> "Your last digit is seven";
+            case 8 -> "Your last digit is eight";
+            case 9 -> "Your last digit is nine";
+            default -> "unknown";
+        };
         System.out.println(digitAsWord);
-
-
-
     }
 }
     /*

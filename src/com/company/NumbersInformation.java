@@ -20,11 +20,7 @@ public class NumbersInformation {
         if (a>b){
             if (a>c){
                 biggest = a;
-                if (b>c) {
-                    smallest = c;
-                } else {
-                    smallest = b;
-                }
+                smallest = Math.min(b, c);
             } else {
                 biggest = c;
                 smallest = b;
@@ -32,11 +28,7 @@ public class NumbersInformation {
         } else {
             if(b>c){
                 biggest = b;
-                if(c<a){
-                    smallest = c;
-                } else {
-                    smallest = a;
-                }
+                smallest = Math.min(c, a);
             } else {
                 smallest = a;
                 biggest = c;

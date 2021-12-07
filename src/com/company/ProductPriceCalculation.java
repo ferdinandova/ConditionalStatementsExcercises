@@ -13,107 +13,62 @@ public class ProductPriceCalculation {
         double price = 0;
 
         switch (drink.toLowerCase(Locale.ROOT)) {
-            case "coffee": {
+            case "coffee" -> {
                 switch (town.toLowerCase(Locale.ROOT)) {
-                    case "sofia":
-                        price = 0.80;
-                        break;
-                    case "plovdiv":
-                        price = 0.70;
-                        break;
-                    case "varna":
-                        price = 0.60;
-                        break;
-                    case "burgas":
-                        price = 0.40;
-                        break;
+                    case "sofia" -> price = 0.80;
+                    case "plovdiv" -> price = 0.70;
+                    case "varna" -> price = 0.60;
+                    case "burgas" -> price = 0.40;
                 }
                 break;
             }
-            case "mineral water": {
-                switch (town) {
-                    case "sofia":
-                        price = 1.10;
-                        break;
-                    case "plovdiv":
-                        price = 1.00;
-                        break;
-                    case "varna":
-                        price = 0.80;
-                        break;
-                    case "burgas":
-                        price = 1.00;
-                        break;
-                }
+            case "mineral water" -> {
+                price = switch (town) {
+                    case "sofia" -> 1.10;
+                    case "plovdiv" -> 1.00;
+                    case "varna" -> 0.80;
+                    case "burgas" -> 1.00;
+                    default -> price;
+                };
                 break;
             }
-            case "hot chocolate": {
-                switch (town) {
-                    case "sofia":
-                        price = 1.20;
-                        break;
-                    case "plovdiv":
-                        price = 1.00;
-                        break;
-                    case "varna":
-                        price = 1.40;
-                        break;
-                    case "burgas":
-                        price = 0.70;
-                        break;
-                }
+            case "hot chocolate" -> {
+                price = switch (town) {
+                    case "sofia" -> 1.20;
+                    case "plovdiv" -> 1.00;
+                    case "varna" -> 1.40;
+                    case "burgas" -> 0.70;
+                    default -> price;
+                };
+            }
+            case "beer" -> {
+                price = switch (town) {
+                    case "sofia" -> 1.60;
+                    case "plovdiv" -> 1.50;
+                    case "varna" -> 1.10;
+                    case "burgas" -> 1.25;
+                    default -> price;
+                };
                 break;
             }
-            case "beer": {
-                switch (town) {
-                    case "sofia":
-                        price = 1.60;
-                        break;
-                    case "plovdiv":
-                        price = 1.50;
-                        break;
-                    case "varna":
-                        price = 1.10;
-                        break;
-                    case "burgas":
-                        price = 1.25;
-                        break;
-
-                }
+            case "energy drink" -> {
+                price = switch (town) {
+                    case "sofia" -> 2.40;
+                    case "plovdiv" -> 1.90;
+                    case "varna" -> 2.50;
+                    case "burgas" -> 3.00;
+                    default -> price;
+                };
                 break;
             }
-            case "energy drink": {
-                switch (town) {
-                    case "sofia":
-                        price = 2.40;
-                        break;
-                    case "plovdiv":
-                        price = 1.90;
-                        break;
-                    case "varna":
-                        price = 2.50;
-                        break;
-                    case "burgas":
-                        price = 3.00;
-                        break;
-                }
-                break;
-            }
-            case "coca cola": {
-                switch (town) {
-                    case "sofia":
-                        price = 2.20;
-                        break;
-                    case "plovdiv":
-                        price = 1.90;
-                        break;
-                    case "varna":
-                        price = 1.80;
-                        break;
-                    case "burgas":
-                        price = 1.70;
-                        break;
-                }
+            case "coca cola" -> {
+                price = switch (town) {
+                    case "sofia" -> 2.20;
+                    case "plovdiv" -> 1.90;
+                    case "varna" -> 1.80;
+                    case "burgas" -> 1.70;
+                    default -> price;
+                };
             }
         }
         System.out.println(drink + " costs " + price + " in " + town);

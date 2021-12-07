@@ -20,7 +20,7 @@ public class ScoreCalculation {
                 bonusPoints = points + points * 3;
             } else if (points >= 401 && points <= 600) {
                 bonusPoints = points + points * 4.5;
-            } else if (points >= 601 && points <= 1000) {
+            } else if (points >= 601) {
                 bonusPoints = points + points * 6;
             }
             if (bonusPoints % 2 != 0) {

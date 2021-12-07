@@ -8,7 +8,7 @@ public class TicketsPrices {
         int price = 50;
         System.out.println("Please enter you age:");
         int age = Integer.parseInt(scanner.nextLine());
-        double priceDiscount= 0;
+        double priceDiscount;
 
         if (age < 16 && age <= 65) {
             priceDiscount = 0.5 * price;

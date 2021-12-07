@@ -14,8 +14,8 @@ public class Shop {
         System.out.println("Please enter the last price:");
         double thirdProduct = Double.parseDouble(scanner.nextLine());
         double sum = firstProduct + secondProduct + thirdProduct;
-        double moneyLeft = 0;
-        double moneyMore = 0;
+        double moneyLeft;
+        double moneyMore;
 
         if (sum <= budget) {
             moneyLeft = budget - sum;
